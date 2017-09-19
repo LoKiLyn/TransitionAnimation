@@ -22,16 +22,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQk-l7-E9k">
-                                <rect key="frame" x="153" y="550" width="69" height="37"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQk-l7-E9k">
+                                <rect key="frame" x="152.5" y="517" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.4039215686" green="0.72156862749999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="Me6-2M-vSF"/>
-                                    <constraint firstAttribute="width" constant="69" id="vZ9-6x-Eon"/>
+                                    <constraint firstAttribute="height" constant="70" id="Me6-2M-vSF"/>
+                                    <constraint firstAttribute="width" constant="70" id="vZ9-6x-Eon"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="29"/>
                                 <state key="normal" title="跳转">
-                                    <color key="titleColor" red="0.95560825892857137" green="0.31021205357142856" blue="0.86531808035714286" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="jumpButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OXt-HU-Mht"/>
                                 </connections>
@@ -63,6 +68,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xok-09-22V">
+                                <rect key="frame" x="57" y="98" width="273" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="SpringAnimation"/>
+                                    <segment title="ShapeAnimation"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Gxo-5m-3ru"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.65634660440000003" green="1" blue="0.76023790420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -75,14 +91,13 @@
                             <constraint firstItem="nDY-tj-I1H" firstAttribute="trailing" secondItem="PAK-2E-noc" secondAttribute="trailing" id="RBb-Oe-ymq"/>
                             <constraint firstItem="PAK-2E-noc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="122" id="SGw-0G-APY"/>
                             <constraint firstAttribute="trailing" secondItem="PAK-2E-noc" secondAttribute="trailing" constant="10" id="WLG-Dv-CL6"/>
-                            <constraint firstItem="YQk-l7-E9k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="153" id="c94-en-qTR"/>
+                            <constraint firstItem="YQk-l7-E9k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="alT-TN-M1p"/>
                             <constraint firstItem="7aP-da-tXx" firstAttribute="centerY" secondItem="PAK-2E-noc" secondAttribute="centerY" id="d7r-SG-CQV"/>
                             <constraint firstItem="nDY-tj-I1H" firstAttribute="centerY" secondItem="qr9-AR-qmi" secondAttribute="centerY" id="eDm-Ae-wqp"/>
                             <constraint firstItem="OT4-lA-OMy" firstAttribute="centerY" secondItem="Ox6-XY-Vy9" secondAttribute="centerY" id="fmT-LE-awH"/>
                             <constraint firstItem="Ox6-XY-Vy9" firstAttribute="top" secondItem="qr9-AR-qmi" secondAttribute="bottom" constant="43" id="txg-O3-NP6"/>
                             <constraint firstItem="qr9-AR-qmi" firstAttribute="leading" secondItem="7aP-da-tXx" secondAttribute="leading" id="wcJ-lR-9qC"/>
                             <constraint firstItem="PAK-2E-noc" firstAttribute="leading" secondItem="7aP-da-tXx" secondAttribute="trailing" constant="20" id="yer-cF-lsK"/>
-                            <constraint firstAttribute="trailing" secondItem="YQk-l7-E9k" secondAttribute="trailing" constant="153" id="yn2-h4-t1o"/>
                             <constraint firstItem="OT4-lA-OMy" firstAttribute="trailing" secondItem="nDY-tj-I1H" secondAttribute="trailing" id="z7a-qI-Le3"/>
                             <constraint firstItem="nDY-tj-I1H" firstAttribute="top" secondItem="PAK-2E-noc" secondAttribute="bottom" constant="38" id="zxF-fn-5mX"/>
                         </constraints>
@@ -92,6 +107,7 @@
                         <outlet property="animationDurationSlider" destination="OT4-lA-OMy" id="IQB-hk-b6V"/>
                         <outlet property="initialVelocitySlider" destination="PAK-2E-noc" id="tuW-q5-03x"/>
                         <outlet property="springSlider" destination="nDY-tj-I1H" id="IyH-ZP-nQ7"/>
+                        <outlet property="transitionButton" destination="YQk-l7-E9k" id="q2V-4F-OMO"/>
                         <segue destination="uwT-YS-YrJ" kind="show" identifier="showBlueVC" id="ztT-cD-E8t"/>
                     </connections>
                 </viewController>
@@ -102,7 +118,7 @@
         <!--Blue View Controller-->
         <scene sceneID="xIQ-go-IHd">
             <objects>
-                <viewController id="uwT-YS-YrJ" userLabel="Blue View Controller" sceneMemberID="viewController">
+                <viewController id="uwT-YS-YrJ" userLabel="Blue View Controller" customClass="BlueViewController" customModule="PlayTransition" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p9i-mP-Vhz"/>
                         <viewControllerLayoutGuide type="bottom" id="Ftg-S9-E6P"/>

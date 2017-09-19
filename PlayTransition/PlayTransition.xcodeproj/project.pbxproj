@@ -13,6 +13,8 @@
 		03473EA51F6BCABA0061CA9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03473EA41F6BCABA0061CA9D /* Assets.xcassets */; };
 		03473EA81F6BCABA0061CA9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03473EA61F6BCABA0061CA9D /* LaunchScreen.storyboard */; };
 		03473EB01F6BCF400061CA9D /* SpringAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03473EAF1F6BCF400061CA9D /* SpringAnimator.swift */; };
+		03F3DE0C1F70BF8C00941838 /* ShapeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3DE0B1F70BF8C00941838 /* ShapeAnimator.swift */; };
+		03F3DE0E1F711E5E00941838 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3DE0D1F711E5E00941838 /* BlueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		03473EA71F6BCABA0061CA9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03473EA91F6BCABA0061CA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03473EAF1F6BCF400061CA9D /* SpringAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimator.swift; sourceTree = "<group>"; };
+		03F3DE0B1F70BF8C00941838 /* ShapeAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeAnimator.swift; sourceTree = "<group>"; };
+		03F3DE0D1F711E5E00941838 /* BlueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				03473E9D1F6BCABA0061CA9D /* AppDelegate.swift */,
 				03473E9F1F6BCABA0061CA9D /* GreenViewController.swift */,
+				03F3DE0D1F711E5E00941838 /* BlueViewController.swift */,
 				03473EA11F6BCABA0061CA9D /* Main.storyboard */,
 				03473EA41F6BCABA0061CA9D /* Assets.xcassets */,
 				03473EA61F6BCABA0061CA9D /* LaunchScreen.storyboard */,
 				03473EA91F6BCABA0061CA9D /* Info.plist */,
 				03473EAF1F6BCF400061CA9D /* SpringAnimator.swift */,
+				03F3DE0B1F70BF8C00941838 /* ShapeAnimator.swift */,
 			);
 			path = PlayTransition;
 			sourceTree = "<group>";
@@ -142,6 +148,8 @@
 			files = (
 				03473EA01F6BCABA0061CA9D /* GreenViewController.swift in Sources */,
 				03473E9E1F6BCABA0061CA9D /* AppDelegate.swift in Sources */,
+				03F3DE0C1F70BF8C00941838 /* ShapeAnimator.swift in Sources */,
+				03F3DE0E1F711E5E00941838 /* BlueViewController.swift in Sources */,
 				03473EB01F6BCF400061CA9D /* SpringAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
